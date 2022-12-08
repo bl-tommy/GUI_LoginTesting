@@ -1,8 +1,8 @@
 import socket
 import main
 
-client = socket.socket(socket.AF_INET, socket.SOCKL_STREAM)
-client.connect(("localhost", 9999))
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(("localhost", 25545))
 
 message = client.recv(1024).decode()
 client.send(input(message).encode())
